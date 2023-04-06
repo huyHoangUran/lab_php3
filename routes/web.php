@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\ListController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\DepartmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ListController::class, 'index']);
+Route::get('/', [EmployeeController::class, 'listEmploy']);
 Route::get('/listRela/{id}', [ListController::class, 'listRela']);
+Route::get('/listDe', [DepartmentController::class, 'listDe']);
+Route::resource('/user', UserController::class);

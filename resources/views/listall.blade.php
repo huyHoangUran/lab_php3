@@ -19,7 +19,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($ass as $key => $as)
+                @foreach ($eplys as $key => $as)
             
                     <tr>
                         <td scope="row">{{$key+=1}}</td>
@@ -36,6 +36,7 @@
                
             </tbody>
         </table>
+        
     </div>
     
    </div>
